@@ -30,9 +30,7 @@ class PhoneNumberFormatter
   end
 
   def country_code
-    return "" unless @number[:country_code]
-
-    "#{@number[:country_code]} "
+    @number[:country_code] ? "#{@number[:country_code]} " : ""
   end
 
   def area_code
