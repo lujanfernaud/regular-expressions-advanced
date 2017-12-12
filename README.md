@@ -55,3 +55,4 @@ end
 ## Additional Resources
 
 - [Back to Basics: Regular Expressions](https://robots.thoughtbot.com/back-to-basics-regular-expressions)
+- [Ruby Style Guide: Regular Expressions](https://github.com/bbatsov/ruby-style-guide#regular-expressions)
