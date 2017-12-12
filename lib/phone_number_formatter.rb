@@ -7,7 +7,7 @@ class PhoneNumberFormatter
     (?<exchange>\d{3})
     .*?
     (?<subscriber>\d{4})
-  }x
+  }x # Ignore spaces inside the regex.
 
   BAD_PHONE = /\A(\d{3})\s(\d{3})\s(\d{3})\z/
 
