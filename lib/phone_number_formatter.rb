@@ -20,7 +20,7 @@ class PhoneNumberFormatter
 
     @number = @number.match(PHONE)
 
-    "#{country_code}(#{area_code}) #{exchange}-#{subscriber}"
+    "#{country_code}#{area_code}#{exchange}#{subscriber}"
   end
 
   private
@@ -36,11 +36,11 @@ class PhoneNumberFormatter
   end
 
   def area_code
-    @number[:area_code]
+    "(#{@number[:area_code]}) "
   end
 
   def exchange
-    @number[:exchange]
+    "#{@number[:exchange]}-"
   end
 
   def subscriber
