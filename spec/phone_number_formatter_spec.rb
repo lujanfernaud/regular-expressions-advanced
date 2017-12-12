@@ -37,8 +37,6 @@ describe PhoneNumberFormatter do
   end
 
   it "can handle numbers with international codes" do
-    pending "After getting all the other specs passing, remove this 'pending' line"
-
     expect(PhoneNumberFormatter.new("+16501231234").format_number).to eq "+1 (650) 123-1234"
   end
 end
