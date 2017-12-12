@@ -16,7 +16,7 @@ class PhoneNumberFormatter
   end
 
   def format_number
-    return @number if number_is_wrong?
+    return @number if @number =~ BAD_PHONE
 
     @number = @number.match(PHONE)
 
@@ -24,10 +24,6 @@ class PhoneNumberFormatter
   end
 
   private
-
-  def number_is_wrong?
-    @number.match(BAD_PHONE)
-  end
 
   def country_code
     @number[:country_code] ? "#{@number[:country_code]} " : ""
