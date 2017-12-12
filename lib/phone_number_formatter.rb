@@ -9,14 +9,12 @@ class PhoneNumberFormatter
     (?<subscriber>\d{4})
   }x # Ignore spaces inside the regex.
 
-  BAD_PHONE = /\A(\d{3})\s(\d{3})\s(\d{3})\z/
-
   def initialize(number)
     @number = number
   end
 
   def format_number
-    return @number if @number =~ BAD_PHONE
+    return @number unless @number =~ PHONE
 
     @number = @number.match(PHONE)
 
